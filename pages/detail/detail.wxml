@@ -1,0 +1,18 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="title">{{ newsDetail.title }}</view>
+  <view class="info">
+    <image src="{{ newsDetail.publisherFace }}" class="head-img"></image>
+    <view class="publish-box">
+      <view>{{ newsDetail.publisher }}</view>
+      <view class="publish-info">
+        <view class="publish-tag">原创</view>
+        <view class="publish-date">发布于  {{ newsDetail.createTime }}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="news">
+  <rich-text nodes="{{ newsDetail.content }}"></rich-text>
+</view>

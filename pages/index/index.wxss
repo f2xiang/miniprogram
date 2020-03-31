@@ -1,0 +1,68 @@
+/**index.wxss**/
+.top {
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: solid 1px rgb(212, 209, 209);
+}
+
+.type-item {
+  display: inline-block;
+  margin: 20rpx;
+  font-size: 18px;
+}
+
+
+.box {
+  padding: 25rpx 25rpx 0 25rpx;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.publish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  color: grey;
+  margin-top: 10rpx;
+  border-bottom: solid 1px rgb(212, 209, 209);
+  padding-bottom: 20rpx;
+}
+
+.date {
+  margin-right: 20rpx;
+}
+
+.three-image-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+.three-image {
+  width: 220rpx;
+  height: 150rpx;
+}
+
+.image-title {
+  display: flex;
+}
+
+.title-width {
+  width: 500rpx;
+  margin-right: 10rpx;
+}
+
+.one-image {
+  height: 150rpx;
+}
+
+.selected {
+  color: red;
+}
+
+
+

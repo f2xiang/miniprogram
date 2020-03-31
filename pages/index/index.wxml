@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<scroll-view class="top" scroll-x="true">
+  <view wx:for="{{ typeList }}" wx:key="{{item.id}}" 
+  class="type-item {{index == selectedIndex? 'selected' : '' }}" 
+  data-index="{{ index }}"
+  data-id="{{item.id}}" 
+  bindtap="getNewsListByType">{{item.name}}</view>
+  <!-- <view class="type-item">体育</view>
+  <view class="type-item">健康</view>
+  <view class="type-item">娱乐</view>
+  <view class="type-item">生活</view>
+  <view class="type-item">摄影</view>
+  <view class="type-item">文学</view>
+  <view class="type-item">科技</view> -->
+</scroll-view>
+
+
+
+<block wx:for="{{ newsList }}" wx:key="{{ item.id }}" >
+  <view wx:if="{{ item.imgType == 0}}" class="box"
+        data-id="{{ item.id }}" bindtap="toDetail">
+    <view class="title">{{ item.title }}</view>
+    <view class="publish">
+      <view class="publisher">{{ item.publisher }}</view>
+      <view class="date">{{ item.createTime }}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{ item.imgType == 3}}" class="box"
+        data-id="{{ item.id }}" bindtap="toDetail">
+    <view class="title">{{ item.title }}</view>
+    <view class="three-image-box">
+      <block wx:for="{{ item.coverImg }}"  wx:for-item="img">
+       <image class="three-image" src="{{ img }}"></image>
+      </block>
+    </view>
+    <view class="publish">
+      <view class="publisher">{{ item.publisher }}</view>
+      <view class="date">{{ item.createTime }}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{ item.imgType == 1}}" class="box"
+    data-id="{{ item.id }}" bindtap="toDetail">
+    <view class="image-title">
+      <view class="title title-width">{{ item.title }}</view>
+      <block wx:for="{{ item.coverImg  }}" wx:for-item="img">
+        <image class="three-image" src="{{ img }}"></image>
+      </block>
+    </view>
+    <view class="publish">
+      <view class="publisher">{{ item.publisher }}</view>
+      <view class="date">{{ item.createTime }}</view>
+    </view>
+  </view>
+
+</block>
